@@ -1,0 +1,24 @@
+package gpaaverage;
+
+import javax.swing.JOptionPane;
+
+public class GPAAverage 
+{
+
+    public static void main(String[] args) 
+    {
+        double gpa = 0.0;
+        double gpaSum = 0.0;
+        int count = 1;
+        
+        while (count <= 5)
+        {
+            gpa = Double.parseDouble(JOptionPane.showInputDialog("Enter "+ 
+                    "your gpa."));
+            gpaSum += gpa;
+            count ++;  
+        }
+        JOptionPane.showMessageDialog(null, "The avergae GPA is : " + gpaSum/(count-1));
+    }
+    
+}
